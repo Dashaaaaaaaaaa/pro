@@ -76,7 +76,7 @@ h1{
 	color: #FFF;
 	font-family: 'Arimo';
 	font-weight: 700;
-	font-size: 90px;
+	font-size: 98px;
   	
   	overflow: hidden;
   	 background: linear-gradient(to right,#092AF6,#092AF6 50% ,white 50% );
@@ -168,13 +168,17 @@ h1{
 	100% {transform: translateX(0) rotate(360deg);}
 }
 h2{
-	margin-top: 3% ;
+	margin-top: 8% ;
 	text-align: center;
 	color: #FFF;
 	font-family: 'Arimo';
 	font-weight: 700;
-	font-size: 90px;
+	font-size: 98px;
+	margin-bottom: 4%;
 
+}
+.container{
+	width: 100%;
 }
 
 .part2_info{
@@ -187,24 +191,23 @@ h2{
 }
 .part2_info p{
 	margin: 3% auto;
-	text-align:center;
 	color: #000;
 	font-family: 'Arimo';
 	font-weight: 400;
-	font-size: 25px;
+	font-size: 30px;
 	width: 100%;
 	height: 100%;
 
 }
 
-.part2_info p:last-child {
-  margin-right: 0;
-}
+
 .part3{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	margin: 0 auto;
 	margin-bottom: 8%;
+	height: 700px;
 }
 .part3_block{
 	display: flex;
@@ -246,6 +249,7 @@ h2{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	margin: 0 auto;
 	background-color: #fff;
 }
 .part4 h2{
@@ -254,22 +258,14 @@ h2{
 	color: #3048EA;
 	font-family: 'Arimo';
 	font-weight: 700;
-	font-size: 85px;
+	font-size: 89px;
 	margin-bottom: 3%;
 }
-h2{
-	margin-top: 8% ;
-	text-align: center;
-	color: #FFF;
-	font-family: 'Arimo';
-	font-weight: 700;
-	font-size: 85px;
-	margin-bottom: 3%;
-}
+
 .part4_info{
 	display: flex;
 	flex-direction: column;
-	width: 94%;
+	width: 100%;
 	margin: 7% auto;
 }
 .part4_info img{
@@ -311,6 +307,7 @@ h2{
 	flex-direction: column;
 	width: 100%;
 	background-color: #fff;
+	margin: 0 auto;
 }
 
 .list{
@@ -389,9 +386,43 @@ h2{
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
-	height: 850px;
+	height: 700px;
+	width: 100%;
 }
 .part6 h2{
+	margin-top: 8% ;
+	text-align: center;
+	color: #3048EA;
+	font-family: 'Arimo';
+	font-weight: 700;
+	font-size: 89px;
+	margin-bottom: 3%;
+}
+.part6 p{
+	color: #000;
+	font-family: 'Arimo';
+	font-weight: 400;
+	font-size: 35px;
+	margin:3% auto;
+	width: 96%;
+	text-align: center;
+	
+}
+
+.part7{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 8%;
+	height: 700px;
+}
+.part8{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #fff;
+}
+.part8 h2{
 	margin-top: 8% ;
 	text-align: center;
 	color: #3048EA;
@@ -400,18 +431,92 @@ h2{
 	font-size: 85px;
 	margin-bottom: 3%;
 }
-.part6 p{
+.inf{
 	color: #000;
 	font-family: 'Arimo';
 	font-weight: 400;
-	width: 87%;
+	text-align: center;
+	width: 95%;
 	font-size: 36px;
 	margin:2% auto;
-	
 }
-.part7{
+.part8_info{
 	display: flex;
-	flex-direction: column;
-	width: 100%;
-	margin-bottom: 8%;
+	flex-direction: row;
+	width: 90%;
+	margin: 4% auto;
+	align-items: center;
+}
+.task{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 4%;
+
+}
+.number{
+	color: #FF6668;
+	font-family: 'Arimo';
+	font-weight: 700;
+	font-size: 50px;
+	margin-right: 3%;
+}
+.np{
+	color: #000;
+	font-family: 'Arimo';
+	font-weight: 400;
+	font-size: 34px;
+}
+.btn {
+	position: relative;
+	margin: 8% auto;
+	width: var(--btn-w);
+	color: var(--primary);
+	border: .15em solid var(--primary);
+	border-radius: 5em;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.3em;
+	line-height: 2em;
+	cursor: pointer;	
+	margin-bottom: 5%;
+}
+.btn a{
+	text-decoration: none;
+	color: #ffffff;
+}
+.dot {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: var(--dot-w);
+	height: 100%;
+	border-radius: 100%;
+	transition: all 300ms ease;
+	display: none;
+}
+.dot:after {
+	content: '';
+	position: absolute;
+	left: calc(50% - .4em);
+	top: -.4em;
+	height: .8em;
+	width: .8em;
+	background: var(--primary);
+	border-radius: 1em;
+	border: .25em solid var(--solid);
+	box-shadow: 0 0 .7em var(--solid),
+				0 0 2em var(--primary);
+}
+.btn:hover .dot,
+.btn:focus .dot {
+	animation: atom 2s infinite linear;
+	display: block;
+}
+@keyframes atom {
+	0% {transform: translateX(0) rotate(0);}
+	30%{transform: translateX(var(--tr-X)) rotate(0);}
+	50% {transform: translateX(var(--tr-X)) rotate(180deg);}
+	80% {transform: translateX(0) rotate(180deg);}
+	100% {transform: translateX(0) rotate(360deg);}
 }
